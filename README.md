@@ -145,7 +145,7 @@ http://adresse_ip_raspeberry/flreactivation
       
       ![2024-02-19_19h11_12](https://github.com/fleothaud/flreactivation/assets/16253157/c2709bc9-9147-40f0-b922-f42bdb370cba)
 
-   4. Configurer les ^paramètres de réactivation
+   4. Configurer les paramètres de réactivation
       
    ![2024-02-19_19h11_52](https://github.com/fleothaud/flreactivation/assets/16253157/790460c1-5d6d-476b-8e20-aebddb11d0d4)
 
