@@ -14,9 +14,13 @@ Pour installer sur un Raspberry Pi, commencez par télécharger et installer le 
 Suivez les instructions d'installation fournies par l'outil. Voici quelques captures d'écran pour vous guider dans le processus :
 
 ![Étape 1](https://github.com/fleothaud/flreactivation/assets/16253157/3bff484e-0992-48ca-816d-ce103b9099b0)
+
 ![Étape 2](https://github.com/fleothaud/flreactivation/assets/16253157/403e2b73-c5c4-4acf-ab08-e8966531fa2d)
+
 ![Étape 3](https://github.com/fleothaud/flreactivation/assets/16253157/448d9662-84c4-4012-b2d9-7ae1c2424434)
+
 ![Étape 4](https://github.com/fleothaud/flreactivation/assets/16253157/e0f3e082-a477-4e2e-b6de-99cb6dc777b7)
+
 ![Étape 5](https://github.com/fleothaud/flreactivation/assets/16253157/e0fdcde4-e93a-4dfc-9287-34570162059c)
 
 **Activer SSH :** Pour permettre l'accès SSH au Raspberry Pi, créez un fichier vide nommé `ssh` à la racine de la carte SD.
@@ -33,14 +37,31 @@ Suivez les instructions d'installation fournies par l'outil. Voici quelques capt
    apt update -y
    apt full-upgrade -y
    apt install apache2 php libapache2-mod-php mariadb-server php-mysql zip git php-curl php-gd php-intl php-json php-mbstring php-xml -y
-   apt install phpmyadmin
+
    ```
 
 ### Configuration de phpMyAdmin
+   ```
+ apt install phpmyadmin
+```
 
-Lors de l'installation de phpMyAdmin, répondez avec soin aux questions posées, notamment pour choisir le serveur web à configurer et définir les mots de passe pour les utilisateurs MySQL.
+Lors de l'installation, il vous sera posé quelques questions auxquelles il faut répondre avec soin :
 
-![Configuration phpMyAdmin](https://github.com/fleothaud/flreactivation/assets/16253157/bc5ef7e4-cbb7-4fd7-b4ee-26e27fd876ea)
+Choisir le serveur web apache2 (utiliser les flèches du clavier ou la touche tab pour se déplacer et la barre d'espace pour sélectionner/désélectionner) :
+Le surlignage rouge n'est pas une sélection, il faut que ça affiche une étoile * entre les crochets, en utilisant la barre d'espace
+![screenshot_20171028_125829](https://github.com/fleothaud/flreactivation/assets/16253157/f63ef282-7973-4ffc-be26-994112676db1)
+
+Créer la base de données phpmyadmin : oui
+![screenshot_20171028_112911](https://github.com/fleothaud/flreactivation/assets/16253157/980ec7a2-5a46-4007-8d7d-e0bd2bb15f72)
+
+
+Définir un mot de passe pour l'utilisateur MySQL phpmyadmin :
+![screenshot_20171028_112939](https://github.com/fleothaud/flreactivation/assets/16253157/634bfbb5-472d-4245-9385-5d8acf5c8b0b)
+
+
+Indiquer le mot de passe de l'utilisateur MySQL « root » tel que défini à l'installation de mysql-server :
+![screenshot_20171028_113015](https://github.com/fleothaud/flreactivation/assets/16253157/d0fe06d5-9252-4fbc-804c-481eb0070215)
+
 
 ### Création d'un utilisateur administrateur pour phpMyAdmin
 
