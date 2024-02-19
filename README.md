@@ -77,7 +77,7 @@ FLUSH PRIVILEGES;
 QUIT;
 ```
 
-Accédez à phpMyAdmin via : `http://adresse_ip_raspberry/phpMyAdmin`, login:fladmin et mp:votre mot de passe pour fladmin
+Accédez à phpMyAdmin via : `http://adresse_ip_raspberry/phpMyAdmin`, login : `fladmin` et mp : `votre mot de passe pour fladmin`
 
 ## Installation de FLRéactivation
 
