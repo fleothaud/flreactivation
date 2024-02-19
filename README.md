@@ -62,7 +62,7 @@ Définir un mot de passe pour l'utilisateur MySQL phpmyadmin :
 ![screenshot_20171028_112939](https://github.com/fleothaud/flreactivation/assets/16253157/634bfbb5-472d-4245-9385-5d8acf5c8b0b)
 
 
-Indiquer le mot de passe de l'utilisateur MySQL « root » tel que défini à l'installation de mysql-server :
+Indiquer le mot de passe de l'utilisateur MySQL « root »  : root
 
 ![screenshot_20171028_113015](https://github.com/fleothaud/flreactivation/assets/16253157/d0fe06d5-9252-4fbc-804c-481eb0070215)
 
