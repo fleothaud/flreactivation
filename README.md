@@ -10,3 +10,7 @@ $DBNAME='coldemo';
 $DBUSER='col.demo';
 $DBPSWD='COL*demo71';
 
+
+Installer les tables à l'aide de ./install/flreactivation.sql
+
+conficurer l'acces admin dans la table flr_users
