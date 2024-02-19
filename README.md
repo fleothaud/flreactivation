@@ -1,10 +1,27 @@
 Flreactivation est basé sur un serveur php mysql
 
-Installation serveur Php mysql
+# Installation serveur Php mysql
 
-windows : <https://www.wampserver.com/>
+## windows
+https://www.wampserver.com/
 
-linux
+## linux (raspeberry)
+Installer Raspberry Pi Imager : https://www.raspberrypi.com/software/
+![2024-02-19_14h12_38](https://github.com/fleothaud/flreactivation/assets/16253157/3bff484e-0992-48ca-816d-ce103b9099b0)
+
+![2024-02-19_14h13_30](https://github.com/fleothaud/flreactivation/assets/16253157/403e2b73-c5c4-4acf-ab08-e8966531fa2d)
+
+![2024-02-19_14h16_18](https://github.com/fleothaud/flreactivation/assets/16253157/448d9662-84c4-4012-b2d9-7ae1c2424434)
+
+![2024-02-19_14h17_17](https://github.com/fleothaud/flreactivation/assets/16253157/e0f3e082-a477-4e2e-b6de-99cb6dc777b7)
+
+![2024-02-19_14h18_12](https://github.com/fleothaud/flreactivation/assets/16253157/e0fdcde4-e93a-4dfc-9287-34570162059c)
+
+
+Pour activer l'accès ssh au raspeberry, creer à la racine de la carte SD un fichier vide nommé ssh
+
+
+introduire la carte sd dans le raspeberry, trouver son adresse ip
 
 sudo apt install apache2 php libapache2-mod-php mariadb-server php-mysql zip git php-curl php-gd php-intl php-json php-mbstring php-xml -y
 
