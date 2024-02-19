@@ -77,7 +77,7 @@ FLUSH PRIVILEGES;
 QUIT;
 ```
 
-Accédez à phpMyAdmin via : `http://flreactivation.local/phpMyAdmin`, login : `fladmin` et mp : `votre mot de passe pour fladmin`
+Accédez à phpMyAdmin via : `http://flreactivation.local/phpMyAdmin` ou `http://adresse_ip_raspeberry/phpMyAdmin`, login : `fladmin` et mp : `votre mot de passe pour fladmin`
 
 ## Installation de FLRéactivation
 
@@ -100,7 +100,7 @@ Accédez à phpMyAdmin via : `http://flreactivation.local/phpMyAdmin`, login : `
 
 Entrez le mot de passe de l'utilisateur `fladmin` lorsque vous y êtes invité.
 
-3. Accédez à FLRéactivation via `http://adresse_ip_raspberry/flreactivation/`
+3. Accédez à FLRéactivation via `http://flreactivation.local/flreactivation`   ou  `http://adresse_ip_raspeberry/flreactivation`
 
 ### Sur Windows
 
@@ -126,7 +126,7 @@ INSERT INTO `flr_users` (`login`, `password`, `statut`) VALUES ('login_admin', '
 
 ## Paramétrage
 
-http://flreactivation.local/flreactivation
+http://flreactivation.local/flreactivation   ou  http://adresse_ip_raspeberry/flreactivation
 
 ![2024-02-19_19h05_28](https://github.com/fleothaud/flreactivation/assets/16253157/ffb33080-3de7-401b-a566-3b616eb9f539)
 
