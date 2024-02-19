@@ -1,8 +1,8 @@
 <?php
 $DBHOST='localhost';
-$DBNAME='coldemo';
-$DBUSER='col.demo';
-$DBPSWD='COL*demo71';
+$DBNAME='flreactivation';
+$DBUSER='db_user';
+$DBPSWD='password';
 try
 {
     $bdd = new PDO('mysql:host='.$DBHOST.';dbname='.$DBNAME, $DBUSER, $DBPSWD);
