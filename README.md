@@ -100,6 +100,18 @@ Accédez à phpMyAdmin via : `http://flreactivation.local/phpMyAdmin` ou `http:/
 
 Entrez le mot de passe de l'utilisateur `fladmin` lorsque vous y êtes invité.
 
+3. Mettre à jour le fichier de configuration
+
+`sudo nano /var/www/html/flreactivation/config.php`
+
+```
+$DBHOST='localhost';
+$DBNAME='flreactivation';
+$DBUSER='fladmin';
+$DBPSWD='password';
+```
+Quitter et sauvegarder : ctrl + X et Yes
+
 3. Accédez à FLRéactivation via `http://flreactivation.local/flreactivation`   ou  `http://adresse_ip_raspeberry/flreactivation`
 
 ### Sur Windows
