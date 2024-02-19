@@ -85,6 +85,14 @@ Pour installer un serveur PHP et MySQL sur Windows, téléchargez et installez W
 
 ## Configuration de l'appli FLREACTIVATION
 
-1. Configuration de l'acces administrateur
+1. Configuration acces administrateur
+
+En ligne de commande :
+sudo mysql -u fladmin -p
+saisir le mot de passe
+USE flreactivation;
+INSERT INTO `flr_users` (`login`, `password`, `statut`) VALUES ('login_admin', 'pass_admin', 'admin');
+
+Depuis 
    
 
