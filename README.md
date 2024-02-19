@@ -112,7 +112,7 @@ $DBPSWD='password';
 ```
 Quitter et sauvegarder : ctrl + X et Yes
 
-3. Accédez à FLRéactivation via `http://flreactivation.local/flreactivation`   ou  `http://adresse_ip_raspeberry/flreactivation`
+4. Accédez à FLRéactivation via `http://flreactivation.local/flreactivation`   ou  `http://adresse_ip_raspeberry/flreactivation`
 
 ### Sur Windows
 
