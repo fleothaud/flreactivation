@@ -25,7 +25,7 @@ Suivez les instructions d'installation fournies par l'outil. Voici quelques capt
 
 1. Insérez la carte SD dans le Raspberry Pi connecté au réseau et démarrez-le.
 2. Connectez-vous en SSH en utilisant la commande `ssh fladmin@flreactivation`, puis entrez le mot de passe configuré lors de la création de l'image.
-3. onbtnez l'adresse ip du raspeberry avec `ip -c a`
+3. obtenez l'adresse ip du raspeberry avec `ip -c a`
 4. Exécutez les commandes suivantes pour mettre à jour le système et installer les composants nécessaires :
 
    ```bash
@@ -87,12 +87,14 @@ Pour installer un serveur PHP et MySQL sur Windows, téléchargez et installez W
 
 1. Configuration acces administrateur
 
-En ligne de commande :
+- En ligne de commande :
 sudo mysql -u fladmin -p
 saisir le mot de passe
 USE flreactivation;
 INSERT INTO `flr_users` (`login`, `password`, `statut`) VALUES ('login_admin', 'pass_admin', 'admin');
 
-Depuis 
+- Depuis phpMyAdmin
+![2024-02-19_16h38_16](https://github.com/fleothaud/flreactivation/assets/16253157/3354ca42-9198-4279-bdaa-7e13a3f957dd)
+
    
 
