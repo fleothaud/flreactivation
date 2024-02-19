@@ -1,6 +1,6 @@
 # FLRéactivation
 
-FLRéactivation est une application basée sur un serveur PHP et MySQL, conçue pour être facilement déployée sur différentes plateformes.
+FLRéactivation est une application basée sur un serveur PHP et MySQL, pouvant être facilement déployée sur différentes plateformes.
 
 ## Installation du serveur PHP et MySQL
 
