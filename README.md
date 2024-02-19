@@ -4,11 +4,6 @@ FLRéactivation est une application basée sur un serveur PHP et MySQL, pouvant 
 
 ## Installation du serveur PHP et MySQL
 
-### Sur Windows
-
-Pour installer un serveur PHP et MySQL sur Windows, téléchargez et installez WampServer depuis le site officiel :
-
-- [Télécharger WampServer](https://www.wampserver.com/)
 
 ### Sur Linux (Raspberry Pi)
 
@@ -81,4 +76,15 @@ Accédez à phpMyAdmin via : `http://adresse_ip_raspberry/phpMyAdmin`, login:fla
 Entrez le mot de passe de l'utilisateur `fladmin` lorsque vous y êtes invité.
 
 3. Accédez à FLRéactivation via `http://adresse_ip_raspberry/flreactivation/`
+
+### Sur Windows
+
+Pour installer un serveur PHP et MySQL sur Windows, téléchargez et installez WampServer depuis le site officiel :
+
+- [Télécharger WampServer](https://www.wampserver.com/)
+
+## Configuration de l'appli FLREACTIVATION
+
+1. Configuration de l'acces administrateur
+   
 
