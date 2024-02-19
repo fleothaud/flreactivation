@@ -143,7 +143,7 @@ http://adresse_ip_raspeberry/flreactivation
 
    **3. Ajouter des disciplines**
       
-      ![2024-02-19_19h11_12](https://github.com/fleothaud/flreactivation/assets/16253157/c2709bc9-9147-40f0-b922-f42bdb370cba)
+   ![2024-02-19_19h11_12](https://github.com/fleothaud/flreactivation/assets/16253157/c2709bc9-9147-40f0-b922-f42bdb370cba)
 
    **4. Configurer les paramètres de réactivation**
       
