@@ -1,7 +1,7 @@
 <?php
 $DBHOST='localhost';
 $DBNAME='flreactivation';
-$DBUSER='db_user';
+$DBUSER='fladmin';
 $DBPSWD='password';
 try
 {
