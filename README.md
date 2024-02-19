@@ -28,7 +28,7 @@ Suivez les instructions d'installation fournies par l'outil. Voici quelques capt
 ### Configuration initiale
 
 1. Insérez la carte SD dans le Raspberry Pi connecté au réseau et démarrez-le.
-2. Connectez-vous en SSH en utilisant la commande `ssh fladmin@flreactivation`, puis entrez le mot de passe configuré lors de la création de l'image.
+2. Connectez-vous en SSH en utilisant la commande `ssh fladmin@flreactivation` depuis le terminal de commande, puis entrez le mot de passe configuré lors de la création de l'image.
 3. obtenez l'adresse ip du raspeberry avec `ip -c a`
 4. Exécutez les commandes suivantes pour mettre à jour le système et installer les composants nécessaires :
 
