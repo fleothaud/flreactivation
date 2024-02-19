@@ -1,98 +1,84 @@
-Flreactivation est basé sur un serveur php mysql
+# FLRéactivation
 
-# Installation serveur Php mysql
+FLRéactivation est une application basée sur un serveur PHP et MySQL, conçue pour être facilement déployée sur différentes plateformes.
 
-## windows
-https://www.wampserver.com/
+## Installation du serveur PHP et MySQL
 
-## linux (raspeberry)
-Installer Raspberry Pi Imager : https://www.raspberrypi.com/software/
-![2024-02-19_14h12_38](https://github.com/fleothaud/flreactivation/assets/16253157/3bff484e-0992-48ca-816d-ce103b9099b0)
+### Sur Windows
 
-![2024-02-19_14h13_30](https://github.com/fleothaud/flreactivation/assets/16253157/403e2b73-c5c4-4acf-ab08-e8966531fa2d)
+Pour installer un serveur PHP et MySQL sur Windows, téléchargez et installez WampServer depuis le site officiel :
 
-![2024-02-19_14h16_18](https://github.com/fleothaud/flreactivation/assets/16253157/448d9662-84c4-4012-b2d9-7ae1c2424434)
+- [Télécharger WampServer](https://www.wampserver.com/)
 
-![2024-02-19_14h17_17](https://github.com/fleothaud/flreactivation/assets/16253157/e0f3e082-a477-4e2e-b6de-99cb6dc777b7)
+### Sur Linux (Raspberry Pi)
 
-![2024-02-19_14h18_12](https://github.com/fleothaud/flreactivation/assets/16253157/e0fdcde4-e93a-4dfc-9287-34570162059c)
+Pour installer sur un Raspberry Pi, commencez par télécharger et installer le Raspberry Pi Imager :
 
+- [Télécharger Raspberry Pi Imager](https://www.raspberrypi.com/software/)
 
-**Pour activer l'accès ssh au raspeberry, créer à la racine de la carte SD un fichier vide nommé ssh**
+Suivez les instructions d'installation fournies par l'outil. Voici quelques captures d'écran pour vous guider dans le processus :
 
-### Premier dé
-introduire la carte sd dans le raspeberry Pi connecté au réseau et demarrer
+![Étape 1](https://github.com/fleothaud/flreactivation/assets/16253157/3bff484e-0992-48ca-816d-ce103b9099b0)
+![Étape 2](https://github.com/fleothaud/flreactivation/assets/16253157/403e2b73-c5c4-4acf-ab08-e8966531fa2d)
+![Étape 3](https://github.com/fleothaud/flreactivation/assets/16253157/448d9662-84c4-4012-b2d9-7ae1c2424434)
+![Étape 4](https://github.com/fleothaud/flreactivation/assets/16253157/e0f3e082-a477-4e2e-b6de-99cb6dc777b7)
+![Étape 5](https://github.com/fleothaud/flreactivation/assets/16253157/e0fdcde4-e93a-4dfc-9287-34570162059c)
 
-### Connexion SSH
-ssh fladmin@flreactivation
+**Activer SSH :** Pour permettre l'accès SSH au Raspberry Pi, créez un fichier vide nommé `ssh` à la racine de la carte SD.
 
-saisir le mot de passe configuré à la création de l'image
+### Configuration initiale
 
-sudo su
+1. Insérez la carte SD dans le Raspberry Pi connecté au réseau et démarrez-le.
+2. Connectez-vous en SSH en utilisant la commande `ssh fladmin@flreactivation`, puis entrez le mot de passe configuré lors de la création de l'image.
+3. onbtnez l'adresse ip du raspeberry avec `ip -c a`
+4. Exécutez les commandes suivantes pour mettre à jour le système et installer les composants nécessaires :
 
-apt update -y
+   ```bash
+   sudo su
+   apt update -y
+   apt full-upgrade -y
+   apt install apache2 php libapache2-mod-php mariadb-server php-mysql zip git php-curl php-gd php-intl php-json php-mbstring php-xml -y
+   apt install phpmyadmin
+   ```
 
-apt full-upgrade -y
+### Configuration de phpMyAdmin
 
-apt install apache2 php libapache2-mod-php mariadb-server php-mysql zip git php-curl php-gd php-intl php-json php-mbstring php-xml -y
+Lors de l'installation de phpMyAdmin, répondez avec soin aux questions posées, notamment pour choisir le serveur web à configurer et définir les mots de passe pour les utilisateurs MySQL.
 
-apt install phpmyadmin
+![Configuration phpMyAdmin](https://github.com/fleothaud/flreactivation/assets/16253157/bc5ef7e4-cbb7-4fd7-b4ee-26e27fd876ea)
 
-Lors de l'installation, il vous sera posé quelques questions auxquelles il faut répondre avec soin :
+### Création d'un utilisateur administrateur pour phpMyAdmin
 
-Choisir le serveur web à configurer automatiquement (utiliser les flèches du clavier ou la touche tab pour se déplacer et la barre d'espace pour sélectionner/désélectionner) :
-Le surlignage rouge n'est pas une sélection, il faut que ça affiche une étoile * entre les crochets, en utilisant la barre d'espace
-
-
-![screenshot_20171028_125829](https://github.com/fleothaud/flreactivation/assets/16253157/bc5ef7e4-cbb7-4fd7-b4ee-26e27fd876ea)
-Créer la base de données phpmyadmin : oui
-
-![screenshot_20171028_112911](https://github.com/fleothaud/flreactivation/assets/16253157/dade38ad-f0d9-426d-8bb8-9a87eee2a3c6)
-Définir un mot de passe pour l'utilisateur MySQL phpmyadmin :
-
-![screenshot_20171028_112939](https://github.com/fleothaud/flreactivation/assets/16253157/997c5731-399d-440e-bb67-d62bc4144902)
-Indiquer le mot de passe de l'utilisateur MySQL « root » tel que défini à l'installation de mysql-server :
-![screenshot_20171028_113015](https://github.com/fleothaud/flreactivation/assets/16253157/316a3ab6-728c-4af9-b266-8106460b20ef)
-
-
-Création administrateur  pour acces phpmyadmin
-
+```sql
 sudo mysql
-Création de l'utilisateur fladmin
-
-CREATE USER 'fladmin'@'localhost' IDENTIFIED BY 'password';
-
-Attribution de tous les privilèges
-
-GRANT ALL PRIVILEGES ON *.* TO 'fladmin'@'localhost'; 
-
-Appliquer les modifications
-
-FLUSH PRIVILEGES; 
-
+CREATE USER 'fladmin'@'localhost' IDENTIFIED BY 'votre mot de passe pour fladmin';
+GRANT ALL PRIVILEGES ON *.* TO 'fladmin'@'localhost';
+FLUSH PRIVILEGES;
 QUIT;
+```
 
-Acces phpmyadmin : http://adresse_ip/phpMyAdmin
+Accédez à phpMyAdmin via : `http://adresse_ip_raspberry/phpMyAdmin`, login:fladmin et mp:votre mot de passe pour fladmin
 
+## Installation de FLRéactivation
 
-## Installation FLRéactivation
+1. Clonez le dépôt dans le répertoire web :
 
-cd /var/www/html/
+   ```bash
+   cd /var/www/html/
+   sudo git clone https://github.com/fleothaud/flreactivation.git
+   sudo chown -R www-data:www-data /var/www/html/flreactivation
+   ```
 
-sudo git clone https://github.com/fleothaud/flreactivation.git
+2. Créez la base de données et importez les tables :
 
-sudo chown -R www-data:www-data /var/www/html/flreactivation
+   ```sql
+   sudo mysql
+   CREATE DATABASE flreactivation;
+   exit;
+   mysql -u fladmin -p flreactivation < /var/www/html/flreactivation/_install/flreactivation.sql
+   ```
 
+Entrez le mot de passe de l'utilisateur `fladmin` lorsque vous y êtes invité.
 
-sudo mysql
-
-CREATE DATABASE flreactivation; 
-
-mysql -u fladmin -p flreactivation < /var/www/html/flreactivation/_install/flreactivation.sql
-
-saisir le mot de passe de l'utilisateur fladmin
-
-acceder à la page d'acces à FLréactivation : http://adresse_ip_raspeberry/flreactivation/
-
-
+3. Accédez à FLRéactivation via `http://adresse_ip_raspberry/flreactivation/`
 
